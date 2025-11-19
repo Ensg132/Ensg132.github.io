@@ -1,0 +1,31 @@
+body {
+    text-align: center;
+   /* background-image: url(../images/fondo.jpg) ;
+    background-size: cover; */
+    overflow: hidden;
+    background-attachment: fixed;
+    background-color: #7A5230 #C7923E ;
+}
+
+h1 {
+    color: red;
+    background-color: yellow;
+    border-style: solid;
+    border-color: rgb(38, 0, 255);
+}
+
+img {
+    border: 4px black solid;
+    border-radius: 20px;
+    width: 300px;
+}
+
+ul {
+}
+
+li {
+    list-style: none;
+    display: inline;
+    border: 4px black solid;
+}
+
