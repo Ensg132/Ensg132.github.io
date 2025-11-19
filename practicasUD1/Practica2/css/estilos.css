@@ -1,10 +1,9 @@
 body {
     text-align: center;
-   /* background-image: url(../images/fondo.jpg) ;
-    background-size: cover; */
+   background-image: url(../images/fondo.jpg) ;
+    background-size: cover;
     overflow: hidden;
     background-attachment: fixed;
-    background-color: #7A5230 #C7923E ;
 }
 
 h1 {
@@ -12,6 +11,7 @@ h1 {
     background-color: yellow;
     border-style: solid;
     border-color: rgb(38, 0, 255);
+    font-family: "BBH Sans Hegarty", sans-serif;
 }
 
 img {
@@ -27,5 +27,6 @@ li {
     list-style: none;
     display: inline;
     border: 4px black solid;
+    font-family: "BBH Sans Hegarty", sans-serif;
 }
 
