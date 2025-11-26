@@ -1,0 +1,128 @@
+*{
+    margin-top: 0px;
+    text-align: justify;
+
+
+}
+
+body {
+  background-color: rgb(228, 202, 252);
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 5px black solid;
+    background-color: rgb(221, 209, 233);
+    margin-bottom: 10px;
+
+}
+
+
+ div img{
+border: 5px black solid;
+margin: 10px;
+margin-right: 60px;
+
+}
+div #image{
+    text-align: right;
+
+}
+
+div #content{
+
+}
+
+div p{
+    box-shadow: 5px 5px 1px grey ;
+    text-indent: 40px;
+    padding: 10px;
+}
+div p:first-child{
+    border: 5px black solid;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-style: dashed;
+    background-color: rgb(180, 180, 180)
+}
+div p:last-child{
+    border: 5px black solid;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-style: dashed;
+}
+
+ul {
+    text-align: center;
+
+}
+
+li {
+    border-left: 5px red solid;
+    display: inline;
+}
+
+p{
+
+}
+
+#header {
+  
+}
+
+#content{
+  
+}
+
+#text {
+  
+}
+
+#text p {
+  
+}
+
+#text p:first-child {
+  
+}
+
+#text p:last-child {
+
+}
+
+#menu {
+
+}
+
+#menu a{
+
+}
+
+
+#menu li{
+
+}
+
+#menu li a:hover{
+
+}
+
+#footer{
+    border-top: 5px black solid;
+
+}
+
+#footer a{
+
+}
+
+#footer a:hover{
+
+}
+#image {
+
+}
+
+@media all and (max-width: 500px) {
+
+}
