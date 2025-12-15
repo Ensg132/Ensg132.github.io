@@ -29,11 +29,12 @@ body {
     /* 4- color de fondo */
     border: 1px solid lightgray;
     /* 5- redondear el borde */
+    border-radius: 10px;
     /* 6- sombra */
     margin: 10px auto;
     padding: 20px;
     text-align: center;
-    border-radius: 10px;    
+        
 }
 footer {
     padding: 0px;
