@@ -31,6 +31,7 @@ body {
     /* 5- redondear el borde */
     border-radius: 10px;
     /* 6- sombra */
+    box-shadow: 10px 10px rgb(49, 49, 49);
     margin: 10px auto;
     padding: 20px;
     text-align: center;
