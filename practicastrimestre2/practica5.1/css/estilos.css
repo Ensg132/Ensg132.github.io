@@ -240,7 +240,7 @@ p {
     */
     /* necesitas 1 instruccion*/
     /*1: */
-    position:fixed;
+    float:none;
     text-align: center;
     padding-bottom: 5px;
   }
@@ -251,6 +251,7 @@ p {
     */
     /* necesitas 1 instruccion*/
     /*1: */
+    float:none;
     text-align: center;
     clear: both;
   padding-bottom: 5px;
@@ -266,7 +267,7 @@ p {
     */
     /* necesitas 1 instruccion*/
     /*1: */
-
+    float: none;
     text-align: center;
     margin-bottom: 40px;
   }
