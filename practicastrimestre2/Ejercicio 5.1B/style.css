@@ -1,0 +1,97 @@
+*{
+  margin: 0px auto;
+}
+
+body {
+  background: url(img/fondo.jpeg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  font-family: 'Indie Flower', cursive;
+}
+#menu{
+  text-align: center;
+  background-color: rgb(69, 69, 255);
+  font-size: 30px;
+  font-weight: bolder;
+  position: fixed;
+  width: 100%;
+  border-bottom: 2px black solid;
+
+}
+#menu li{
+  display: inline;
+
+}
+
+div#header{
+  text-align: center;
+  background-color: green;
+  border: 2px black solid;
+  padding-top: 5%;
+}
+div#cookieEU{
+  border: 1px black solid;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  right: 20%;
+  background-color: white;
+}
+div#textCookie{
+ text-align: justify;
+ padding: 1px;
+}
+div#textCookie a{
+  text-align: center;
+  background-color: green;
+  position: relative;
+  left: 45%;
+  font-size: 20px;
+  color: red;
+}
+
+#content{
+
+  text-align: center;
+
+}
+
+#imageLeft{
+  float: left;
+  border:5px black solid;
+
+}
+#imageRight{
+  float: right;
+}
+
+#image {
+  text-align: right;
+  margin-right: 60px;
+}
+#textOverflow {
+
+  overflow-y: scroll; 
+  overflow-x: hidden;
+  height: 250px;
+  text-align: justify;
+  border: 5px solid black;
+  background-color: white;
+  padding: 20px;
+  margin-right: 20px;
+}
+#textCentral {
+overflow-y: scroll; 
+  overflow-x: hidden;
+  height: 250px;
+  text-align: justify;
+  border: 5px solid black;
+  background-color: white;
+  padding: 20px;
+  margin-right: 20px;   /* resto */
+}
+#textMain{
+  clear: left;
+}
