@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/practicasUD1/practica2css/index.html"
+    "livePreview.defaultPreviewPath": "/practicasUD1/practica2css/index.html",
+    "github.copilot.chat.alternateGeminiModelFPrompt.enabled": true
 }

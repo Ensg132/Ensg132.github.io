@@ -1,23 +1,175 @@
+html {
+    height: 100%;
+    width: 100%
+}
+*{
+    margin: 0%;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-image: url("img/anillo.jpeg");
+    background-size: cover;
+}
 #menu{
+width: 100%;
+height: 5%;
+background-color: blue;
+position:fixed;
+top:0%;
+}
+#menu ul li{
+ display: inline;
+}
+#menu ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 2%;
+}
+#menu ul li a:hover{
+    color: rgb(255, 0, 0);
+    text-decoration: underline;
 
 }
 #titulo{
-
+margin-top: 2%;
+color: orange;
+font-size: 300%;
 }
 #content{
+width: 100%;
+height: 100%;
+overflow-x: hidden;
+overflow-y: hidden;
 
 }
 
 #text1{
+    float: left;
+    width: 70%;
+    height: 30%;
+    background-color: white;
+    border:1px solid black;
+    margin-left: 2%;
+    overflow-y: hidden;
+    overflow-x:hidden;
+    margin-top: 2%;
+    margin-bottom: 2%;
 
+}
+#text1 p{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    height: 90%;
+    width: 80%;
+    float: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    
 }
 #image1{
+    width: 19%;
+    height: 100%;
+    float: right;
 
+
+
+}
+#image1 img{
+    width: 100%;
+    height: 100%;
 }
 #text2{
+float: left;
+border:1px solid black;
+background-color: white;
+width: 70%;
+height: 30%;
+margin-left: 2%;
+overflow: hidden;
+clear: left;
 
 }
+#text2 p{
 
+    height: 100%;
+    width: 80%;
+    float: right;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 #image2{
-  
+    width: 20%;
+    height: 100%;
+    float: right;
+}
+#image2 img{
+    width: 100%;
+    height: 100%;       
+}
+aside {
+    margin-top: 0%;
+    height: 100%;
+    width: 20%;
+    float: right;
+    background-color: black;
+    border: gray 2px solid;
+    border-style: dashed;
+    overflow-x: hidden;
+}
+aside ul{
+    width: 100%;
+    height: 100%;
+}
+aside ul li{
+    list-style-type: none;
+    width: 100%;
+}
+aside img{
+    width: 50%;
+
+}   
+footer{
+    background-color: blue;
+    color: white;
+    width: 100%;
+    height: 5%;
+    clear: both;
+}
+@media all and (max-width: 800px) {
+aside{
+    float:none;
+
+    width: 100%;
+    height: 15%;
+    overflow: hidden;
+}
+aside ul li{
+    display: inline;
+        height: 100%;
+    width: 100%;
+
+}
+#text1,#text2{
+    float:none;
+    width: 95%;
+}
+aside img{
+
+    width: 20%  ;
+    height: auto;
+    margin: 0%;
+
+}
+aside ul{
+    height: 100%;
+    width: 100%;
+    margin:0%;
+         margin:0%;
+     padding: 0%;
+     list-style: none;
+}
 }
