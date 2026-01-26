@@ -8,6 +8,8 @@ body {
   background-position: center center;
   background-size: cover;
   font-family: 'Indie Flower', cursive;
+  width: 100%;
+  height: 100%;
 }
 #menu{
   text-align: center;
@@ -29,26 +31,26 @@ div#header{
   background-color: green;
   border: 2px black solid;
   padding-top: 5%;
-  margin-bottom: 0%;
+  margin-bottom: 2%;
 }
 div#cookieEU{
   border: 1px black solid;
   text-align: center;
-  position: absolute;
+  position: fixed;
   top: 30%;
   left: 20%;
-  right: 20%;
+  right: 25%;
+
   background-color: white;
 }
 div#textCookie{
- text-align: justify;
+ text-align: center;
  padding: 1px;
 }
 div#textCookie a{
   text-align: center;
   background-color: green;
-  position: relative;
-  left: 45%;
+
   font-size: 20px;
   color: red;
 }
@@ -76,37 +78,52 @@ div#textCookie a{
 
   overflow-y: scroll; 
   overflow-x: hidden;
-  height: 250px;
+
   text-align: justify
   ;
   border: 5px solid black;
   background-color: white;
-  padding: 20px;
-  
+
+  float: left;
+  height: 40%;
+  width: 80%;
+
   
 }
 
 #textCentral {
 overflow-y: scroll; 
   overflow-x: hidden;
-  height: 250px;
+
   text-align: justify;
   border: 5px solid black;
   background-color: white;
-  padding: 20px;
-  margin-right: 20px;
+
+
 
   text-align: justify;
-  margin-left: 2%;
+
+  float: left;
+
+  width: 70%;
+
+
+
 
 }
 #textMain{
-margin-top: 20px;
-text-align: center;
 
-margin-left: 2%;
-margin-right: 20%;
-margin-bottom: 2%;
+text-align: center;
+overflow-y: scroll;
+
+width: 70%;
+
+
+float:left;
+clear:left;
+height: 40%;
+
+
 }
 
 #anillo{
@@ -120,33 +137,16 @@ margin-bottom: 2%;
   top: 3px;
   border-top: 2px black solid;
   width: 100%;
-  clear: right;
+  clear: both;
 
 }
 aside{
   float: right;
-  width: 20%;
-  height: 100%;
-  vertical-align: middle;
   background-color: rgb(255, 255, 255);
   overflow-x: hidden;
-  margin-left: 5%;
+
   background-color: black;
 
 
-  
 }
-aside img{
-  width: 100%;
-  overflow: hidden;
 
-}
-section{
-  float: right;
-  height: 100%;
-}
-content{
-width: 100%;
-height: 100%;
-overflow-y: hidden;
-}
