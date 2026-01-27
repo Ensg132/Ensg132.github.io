@@ -125,6 +125,7 @@ aside {
     border: gray 2px solid;
     border-style: dashed;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 aside ul{
     width: 100%;
@@ -144,6 +145,37 @@ footer{
     width: 100%;
     height: 5%;
     clear: both;
+}
+
+#textCookie {
+  text-align: center;
+}
+
+#cookieEU {
+
+  position: fixed;
+  top: 40%;
+  left: 20%;
+  right: 20%;
+  border:2px solid red;
+  background-color: white;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  box-shadow: 2px 2px 50px black;
+}
+.button {
+  	background-color: #097054; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button:hover {
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 @media all and (max-width: 800px) {
 aside{
