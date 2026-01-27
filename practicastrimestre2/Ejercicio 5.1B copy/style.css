@@ -12,6 +12,7 @@ body{
     text-align: center;
     background-image: url("img/anillo.jpeg");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 #menu{
 width: 100%;
