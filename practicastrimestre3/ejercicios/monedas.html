@@ -27,7 +27,8 @@
         function creaElemento(valor, clave) {            
             let total= Math.round(parseFloat(cantidad.value)*parseFloat(valor)*100)/ 100
             /*  ACABALO  */
-
+            let liElement= document.createElement("li")
+            
             
             //let liElement ....
             /*  FIN ACABALO  */    
@@ -50,12 +51,10 @@
                     cambios.forEach(([clave, valor]) => {
                         console.log(clave, valor);
                         /*  ACABALO  */
-
-            
+                        let liElement= creaElemento(valor,clave)
                         //usa creaElemento(valor, clave)
-                        /*  FIN ACABALO  */    
+                        /*  FIN ACABALO  */
                     });
-                    
                 })
                 .catch(error => console.log(error));                        
         }

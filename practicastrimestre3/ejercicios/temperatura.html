@@ -99,10 +99,10 @@
           const temperature = data.main.temp;
           const description = data.weather[0].description;
           const humidity = data.main.humidity;
-
           // Mostramos los datos en el HTML
           /*  ACABALO  */
-
+          const es=getElementById("weather")
+          es.innerHTML=temperature
           /*  FIN ACABALO  */        
         })
         .catch(error => {
