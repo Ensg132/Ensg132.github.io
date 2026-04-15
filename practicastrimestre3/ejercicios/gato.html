@@ -17,7 +17,9 @@
                 .then(response => response.json())
                 .then(data => {
                     console.log(data[0].url)
-                    resultado.innerHTML="<img src="+data[0].url
+                     console.log(data[0].width)
+                      console.log(data[0].height)
+                    resultado.innerHTML= "<img src="+data[0].url+" height="+data[0].height +" width="+data[0].width+">"
                 })
         } 
         boton.addEventListener("click",(e) => {
