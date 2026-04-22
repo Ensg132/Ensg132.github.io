@@ -1,0 +1,46 @@
+<xml version="1.0" encoding="UTF-8">
+<pedido>
+    <destinatario>
+        <nombre_completo>
+        <nombre> Juan </nombre>
+        <apellido1> Delgado </apellido1>
+        <apellido2> Martinez </apellido2>
+    </nombre_completo>
+    </destinatario>
+    <compra>
+        <categoria>
+        bicicleta
+            <ID>
+                A2023
+            </ID>
+        </categoria>
+    <entrega>
+        <direccion>
+            <calle>
+                barco
+                <numero>
+                    4
+                    <piso>
+                        tercero
+                            <letra>
+                                A
+                            </letra>
+                    </piso>
+                </numero>
+            </calle>
+        </direccion>
+        <fecha>
+            <anyo>
+                2000
+                <mes>
+                    5
+                    <dia>
+                        19
+                    </dia>
+                </mes>
+            </anyo>
+        </fecha>
+    </entrega>
+    </compra>
+    </pedido>
+</xml>
