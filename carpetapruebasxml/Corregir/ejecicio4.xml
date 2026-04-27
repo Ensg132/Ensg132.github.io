@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <tabla>
+        <desayuno>
+            <nombre> a </nombre>
+            <precio> 1 </precio>
+            <descripcion> a </descripcion>
+            <calorias> 1 </calorias>
+        </desayuno>
+        <desayuno>
+            <nombre> b </nombre>
+            <precio> 2 </precio>
+            <descripcion> b </descripcion>
+            <calorias>  2 </calorias>
+        </desayuno>
+        <desayuno>
+            <nombre> c </nombre>
+            <precio> 3 </precio>
+            <descripcion> c </descripcion>
+            <calorias> 3 </calorias>
+        </desayuno>
+        <desayuno>
+            <nombre>d </nombre>
+            <precio> 4 </precio>
+            <descripcion> d </descripcion>
+            <calorias> 4 </calorias>
+        </desayuno>
+    </tabla>
