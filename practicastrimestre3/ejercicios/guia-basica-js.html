@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía básica de JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #f0f4ff 0%, #d3e3ff 100%);
+            color: #1a1a1a;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #1c3d72;
+        }
+        section {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,.08);
+            padding: 18px 22px;
+            margin-bottom: 20px;
+        }
+        code, pre {
+            font-family: Consolas, monospace;
+            background: #eef4fb;
+            padding: 6px 10px;
+            border-radius: 6px;
+            display: block;
+            white-space: pre-wrap;
+        }
+        button {
+            margin: 8px 4px 0 0;
+            padding: 10px 14px;
+            border: none;
+            border-radius: 8px;
+            background: #1c3d72;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #152c57;
+        }
+        .resultado {
+            margin-top: 10px;
+            padding: 12px;
+            border-radius: 10px;
+            background: #eef4fb;
+        }
+        .resultado strong {
+            color: #0f2650;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Guía básica de JavaScript</h1>
+    <p>Este documento muestra los principales conceptos para empezar con JS: <strong>funciones</strong>, <strong>arrays</strong>, <strong>if</strong>, <strong>while</strong>, <strong>for</strong> y ejemplos con <strong>fetch</strong> usando APIs reales.</p>
+
+    <section>
+        <h2>1. Tipos de funciones</h2>
+        <p>En JavaScript hay varias formas de definir funciones. Todas hacen lo mismo, pero se usan en contextos distintos.</p>
+
+        <h3>1.1 Declaración de función</h3>
+        <p>Este es el tipo más clásico. La función se puede usar antes o después de declararla.</p>
+        <pre>function saludar(nombre) {
+    return `Hola, ${nombre}!`;
+}</pre>
+
+        <h3>1.2 Expresión de función</h3>
+        <p>La función se guarda en una variable. No se puede usar antes de definirla.</p>
+        <pre>const multiplicar = function(a, b) {
+    return a * b;
+};</pre>
+
+        <h3>1.3 Función flecha</h3>
+        <p>Es una forma más corta y moderna. Ideal para funciones simples.</p>
+        <pre>const suma = (a, b) => a + b;
+const doble = valor => valor * 2;</pre>
+
+        <h3>1.4 Callback</h3>
+        <p>Una función puede recibir otra función como parámetro. Eso se llama callback.</p>
+        <pre>function ejecutarConValor(valor, callback) {
+    return callback(valor);
+}
+
+const resultado = ejecutarConValor(5, num => num + 10);
+console.log(resultado); // 15</pre>
+    </section>
+
+    <section>
+        <h2>2. Arrays</h2>
+        <p>Un array guarda varios valores dentro de una sola variable.</p>
+        <pre>const frutas = ["manzana", "plátano", "kiwi"];
+console.log(frutas[0]); // manzana
+frutas.push("pera"); // añade al final
+frutas.pop(); // quita el último elemento</pre>
+
+        <p>También podemos recorrer los arrays con diferentes bucles.</p>
+        <h3>2.1 Bucle for</h3>
+        <pre>for (let i = 0; i < frutas.length; i++) {
+    console.log(i, frutas[i]);
+}</pre>
+
+        <h3>2.2 for...of</h3>
+        <pre>for (const fruta of frutas) {
+    console.log(fruta);
+}</pre>
+
+        <h3>2.3 forEach</h3>
+        <pre>frutas.forEach((fruta, indice) => {
+    console.log(indice, fruta);
+});</pre>
+    </section>
+
+    <section>
+        <h2>3. if / else</h2>
+        <p>Se usa cuando queremos tomar decisiones en el código.</p>
+        <pre>const edad = 18;
+if (edad >= 18) {
+    console.log("Puedes entrar");
+} else {
+    console.log("Aún no puedes entrar");
+}</pre>
+
+        <p>También existe <code>else if</code> para más opciones.</p>
+        <pre>const temperatura = 30;
+if (temperatura > 35) {
+    console.log("Hace mucho calor");
+} else if (temperatura >= 25) {
+    console.log("Hace buen tiempo");
+} else {
+    console.log("Hace fresco");
+}</pre>
+    </section>
+
+    <section>
+        <h2>4. while</h2>
+        <p>El bucle <code>while</code> repite código mientras la condición sea verdadera.</p>
+        <pre>let contador = 0;
+while (contador < 5) {
+    console.log("contador =", contador);
+    contador++;
+}</pre>
+    </section>
+
+    <section>
+        <h2>5. for</h2>
+        <p>El bucle <code>for</code> es muy útil cuando conocemos el número de repeticiones.</p>
+        <pre>for (let i = 1; i <= 5; i++) {
+    console.log("Paso", i);
+}</pre>
+    </section>
+
+    <section>
+        <h2>6. Fetch con APIs reales</h2>
+        <p>La función <code>fetch</code> nos permite conectar con servicios externos que devuelven datos en JSON.</p>
+        <p>Aquí uso URLs similares a las de tus trabajos: <strong>Frankfurter</strong>, <strong>The Cat API</strong> y <strong>Coinbase</strong>.</p>
+
+        <button id="btnMonedas">Obtener conversión EUR</button>
+        <button id="btnGato">Obtener imagen de gato</button>
+        <button id="btnCripto">Obtener precio BTC</button>
+
+        <div id="fetchResult" class="resultado">Pulsa uno de los botones para ver los resultados aquí.</div>
+    </section>
+
+    <script>
+        // 1. Ejemplo de función declarada:
+        function mostrarTexto(texto) {
+            return `Mensaje: ${texto}`;
+        }
+
+        // 2. Ejemplo de función expresión:
+        const dividir = function(a, b) {
+            return a / b;
+        };
+
+        // 3. Ejemplo de función flecha:
+        const restar = (a, b) => a - b;
+
+        // 4. Ejemplo usando callback:
+        function procesarNumero(numero, callback) {
+            return callback(numero);
+        }
+
+        const totalCallback = procesarNumero(10, numero => numero * 3);
+        console.log(mostrarTexto("Hola desde JS"));
+        console.log("10 * 3 =", totalCallback);
+        console.log("15 - 7 =", restar(15, 7));
+        console.log("12 / 4 =", dividir(12, 4));
+
+        // 5. Array con ejemplos y bucles:
+        const colores = ["rojo", "azul", "verde"];
+
+        const listaColores = [];
+        for (let i = 0; i < colores.length; i++) {
+            listaColores.push(`Color ${i + 1}: ${colores[i]}`);
+        }
+        console.log(listaColores);
+
+        let suma = 0;
+        let multiplicar = 1;
+        const numeros = [1, 2, 3, 4, 5];
+        let posicion = 0;
+
+        while (posicion < numeros.length) {
+            suma += numeros[posicion];
+            multiplicar *= numeros[posicion];
+            posicion++;
+        }
+
+        console.log("Suma con while =", suma);
+        console.log("Multiplicación con while =", multiplicar);
+
+        // 6. Ejemplo de fetch con la API de Frankfurter
+        function obtenerCambioEUR() {
+            const apiUrl = 'https://api.frankfurter.dev/v1/latest?base=EUR';
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error en la petición: ' + response.status);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // data.rates contiene las tasas de cambio
+                    const euroADolar = data.rates.USD;
+                    const euroALibra = data.rates.GBP;
+                    document.getElementById('fetchResult').innerHTML =
+                        `<strong>Frankfurter API</strong><br>` +
+                        `1 EUR = ${euroADolar} USD<br>` +
+                        `1 EUR = ${euroALibra} GBP`;
+                })
+                .catch(error => {
+                    document.getElementById('fetchResult').textContent =
+                        'No se pudo obtener el cambio: ' + error.message;
+                });
+        }
+
+        // 7. Ejemplo de fetch con The Cat API
+        function obtenerGato() {
+            const apiUrl = 'https://api.thecatapi.com/v1/images/search';
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const gatoUrl = data[0].url;
+                    document.getElementById('fetchResult').innerHTML =
+                        `<strong>The Cat API</strong><br>` +
+                        `<img src="${gatoUrl}" alt="Gato aleatorio">`;
+                })
+                .catch(error => {
+                    document.getElementById('fetchResult').textContent =
+                        'No se pudo obtener la imagen del gato: ' + error.message;
+                });
+        }
+
+        // 8. Ejemplo de fetch con Coinbase
+        function obtenerPrecioBTC() {
+            const apiUrl = 'https://api.coinbase.com/v2/prices/BTC-EUR/spot';
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const precio = data.data.amount;
+                    document.getElementById('fetchResult').innerHTML =
+                        `<strong>Coinbase API</strong><br>` +
+                        `Precio de 1 BTC = ${precio} EUR`;
+                })
+                .catch(error => {
+                    document.getElementById('fetchResult').textContent =
+                        'No se pudo obtener el precio de BTC: ' + error.message;
+                });
+        }
+
+        // 9. Eventos para los botones
+        document.getElementById('btnMonedas').addEventListener('click', obtenerCambioEUR);
+        document.getElementById('btnGato').addEventListener('click', obtenerGato);
+        document.getElementById('btnCripto').addEventListener('click', obtenerPrecioBTC);
+    </script>
+</body>
+</html>

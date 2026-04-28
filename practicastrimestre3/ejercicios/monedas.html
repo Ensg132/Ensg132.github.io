@@ -28,7 +28,7 @@
             let total= Math.round(parseFloat(cantidad.value)*parseFloat(valor)*100)/ 100
             /*  ACABALO  */
             let liElement= document.createElement("li")
-            
+            liElement.textContent= `${cantidad.value} ${moneda} = ${total} ${clave}`
             
             //let liElement ....
             /*  FIN ACABALO  */    
@@ -46,15 +46,16 @@
                 .then(datos => {
                     // haz cosas con los datos        
                     console.log(datos);
-                    let cambios=Object.entries(datos.rates)                    
+                    let cambios = Object.entries(datos.rates);
+                    let lista = document.createElement("ul");
 
                     cambios.forEach(([clave, valor]) => {
                         console.log(clave, valor);
-                        /*  ACABALO  */
-                        let liElement= creaElemento(valor,clave)
-                        //usa creaElemento(valor, clave)
-                        /*  FIN ACABALO  */
+                        let liElement = creaElemento(valor, clave);
+                        lista.appendChild(liElement);
                     });
+
+                    resultado.appendChild(lista);
                 })
                 .catch(error => console.log(error));                        
         }
