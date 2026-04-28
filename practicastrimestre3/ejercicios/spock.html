@@ -175,7 +175,7 @@
     </div>
     
     <script>
-        let tiempoPensar=5;
+        let tiempoPensar=0.2;
         const opciones = ["piedra", "papel", "tijera", "lagarto", "spock"];
         const reglas = {
                 piedra: ["tijera", "lagarto"],
@@ -187,15 +187,35 @@
         const listaOpciones = document.getElementById("playerChoice");
         let jugadorEscoge;
         let ordenadorEscoge;
+        let timerId;
         const eleccionesEl = document.getElementById("elecciones");
         const resultadoEl  = document.getElementById("resultado");
         const btnReiniciar = document.getElementById("btnReiniciar");
 
         listaOpciones.addEventListener("change", function() {
-            /*  ACABALO  */
+            jugadorEscoge = this.value;
+            ordenadorEscoge = undefined;
 
-            /*  FIN ACABALO  */            
+            // Si el jugador no ha seleccionado una opción válida, no hacemos nada.
+            if (!jugadorEscoge) {
+                eleccionesEl.innerHTML = "Elige una opción para jugar.";
+                resultadoEl.textContent = "—";
+                resultadoEl.className = "resultado-veredicto veredicto-espera";
+                btnReiniciar.style.display = "none";
+                document.getElementById("ordenadorElige").textContent = "Ordenador Pensando elección ...";
+                return;
+            }
 
+            resultadoEl.textContent = "Esperando al ordenador ...";
+            resultadoEl.className = "resultado-veredicto veredicto-espera";
+            document.getElementById("ordenadorElige").textContent = "Ordenador pensando elección ...";
+            btnReiniciar.style.display = "none";
+
+            if (timerId) {
+                clearTimeout(timerId);
+            }
+
+            descuenta();
         });
 
         // decide quien gana
@@ -250,10 +270,16 @@
 
         //Promesa cuando pase el tiempo establecido el ordenador escoge
         function descuenta(){
-            /*  ACABALO  */
+            if (!jugadorEscoge) {
+                return;
+            }
 
-            /*  FIN ACABALO  */            
-
+            const espera = Math.max(0.2, tiempoPensar) * 1000;
+            timerId = setTimeout(() => {
+                ordenadorEscoge = opciones[Math.floor(Math.random() * opciones.length)];
+                document.getElementById("ordenadorElige").textContent = `Ordenador eligió: ${ordenadorEscoge}`;
+                quienGana(jugadorEscoge, ordenadorEscoge);
+            }, espera);
         }
 
         // el ordenador escoge tras pasar un tiempo
