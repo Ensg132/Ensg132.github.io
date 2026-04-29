@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+<peliculas>
 <pelicula>
   <titulo>Con faldas y a lo loco</titulo>
   <director>Billy Wilder</director>
@@ -7,4 +8,5 @@
   <director>Leo McCarey</director>
   <titulo>Sopa de ganso</titulo>
 </pelicula>
-<autor />barto</autor>
+<autor>barto</autor>
+</peliculas>
